@@ -12,6 +12,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" type="text/css" rel="stylesheet">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -23,22 +24,15 @@
       <div class="logo" >
         <img id="logo" src="\images\Logo.png">
       </div>
-        <div class="col-md-4">
-          <nav class="navbar">
-          <div class="container">
-            <div class="">
-              <a class="navbar-brand" href="/">Navigation</a>
-            </div>
-            <div id="" class="">
+      <div class="content-right col-md-3">
+          <nav class="navigation">
               <ul class="">
-                <li><a href="/">Home</a></li>
-                <li><a href="/user">Benutzer</a></li>
-                <li><a href="/user/create">Benutzer erstellen</a></li>
+                  <a href="/"><li>Home</li></a>
+                  <a href="/user"><li>Benutzer</li></a>
+                  <a href="/user/create"><li>Benutzer erstellen</li></a>
               </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </nav>
-    </div>
-    <div class="container col-md-8">
+          </nav>
+      </div>
+    <div class="container col-md-9">
 
     <h1><?= $heading ?></h1>
