@@ -10,3 +10,5 @@ CREATE TABLE  user (
 
 INSERT INTO user (firstName, lastName, email, password) VALUES ('Ramon',  'Binz',  'ramon.binz@bbcag.ch',   sha1('ramon'));
 INSERT INTO user (firstName, lastName, email, password) VALUES ('Samuel', 'Wicky', 'samuel.wicky@bbcag.ch', sha1('samuel'));
+
+Alter table user drop password;

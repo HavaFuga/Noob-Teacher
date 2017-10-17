@@ -1,6 +1,6 @@
         <hr>
         <footer>
-          <p>&copy; ICT Berufsbildungcenter AG 2016</p>
+          <p>&copy;Created by Ali Dapar and Hava Fuga</p>
         </footer>
     </div>
 
