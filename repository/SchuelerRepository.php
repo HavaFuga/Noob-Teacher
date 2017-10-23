@@ -28,14 +28,14 @@ class SchuelerRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    public function create($firstName, $lastName, $email)
+    public function create($firstname, $lastname, $email)
     {
        
 
-        $query = "INSERT INTO $this->tableName (firstName, lastName, email) VALUES (?, ?, ?)";
+        $query = "INSERT INTO $this->tableName (firstname, lastname, email) VALUES (?, ?, ?)";
 
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('ssss', $firstName, $lastName, $email);
+        $statement->bind_param('sss', $firstname, $lastname, $email);
 
         if (!$statement->execute()) {
             throw new Exception($statement->error);
