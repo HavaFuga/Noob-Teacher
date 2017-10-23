@@ -1,18 +1,18 @@
 <article class="hreview open special">
-	<?php if (empty($users)): ?>
+	<?php if (empty($schueler)): ?>
 		<div class="dhd">
 			<h2 class="item title">Hoopla! Keine Schüler gefunden.</h2>
             
 		</div>
 	<?php else: ?>
-		<?php foreach ($users as $user): ?>
+		<?php foreach ($schueler as $user): ?>
 			
 				
 				    
-					<?= $user->firstName ?>
-                    <?=  $user->lastName . "\t" ?> 
+					<?= $user->firstname?>
+                    <?=  $user->lastname . "\t" ?> 
                     
-                    <?= $user->email ?> 
+                    <?= $user->email?> 
     
 						<a title="Löschen" href="/user/delete?id=<?= $user->id ?>">Löschen</a>
 					<br>
