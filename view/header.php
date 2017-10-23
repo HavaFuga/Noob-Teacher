@@ -22,7 +22,7 @@
   </head>
   <body>
       <div class="logo" >
-        <img id="logo" src="\images\Logo.png">
+          <a href="/"><img id="logo" src="\images\Logo.png"></a>
       </div>
 
     <div class="container">
@@ -33,7 +33,7 @@
                     <a href="/"><li>Home</li></a>
                     <a href="/schueler"><li>Schüler</li></a>
                     <a href="/schueler/create"><li>Schüler erstellen</li></a>
-                    <a href="/schueler/create"><li>Schüler erstellen</li></a>
+                    <a href="/schueler/edit"><li>Schüler bearbeiten</li></a>
                     <a href="/schueler/help"><li>Hilfe</li></a>
                 </ul>
             </nav>

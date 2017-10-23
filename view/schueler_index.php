@@ -13,7 +13,7 @@
                     <?=  $user->lastname . "\t" ?> 
 
                     <?= $user->email?>
-						<a title="Löschen" href="/schueler/delete?id=<?= $user->id ?>">Löschen</a>
+					
 
 					<br>
 				

@@ -73,4 +73,22 @@ class SchuelerController
         // Anfrage an die URI /user weiterleiten (HTTP 302)
         header('Location: /schueler');
     }
+    public function edit()
+    {
+        
+        $schuelerRepository = new SchuelerRepository();
+        $view = new View('schueler_edit');
+        $view->title = 'Schüler bearbeiten';
+        $view->heading = 'Schüler bearbeiten';
+        $view->schueler = $schuelerRepository->readAll();
+        $view->display();
+        
+    }
+    public function help()
+    {
+        $view = new View('schueler_help');
+        $view->title = 'Hilfe';
+        $view->heading = 'Hilfe';
+        $view->display();
+    }
 }

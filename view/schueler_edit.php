@@ -1,29 +1,53 @@
-<form class="form-horizontal" action="/schueler/doCreate" method="post">
+<form class="form" action="/schueler/edit" method="post">
 	<div class="component" data-html="true">
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="firstname">Vorname</label>
 		  <div class="col-md-4">
 		  	<input id="firstname" name="firstname" type="text" placeholder="Vorname" class="form-control input-md">
-		  </div>
-		</div>
+		  </div><br>
+		</div><br>
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="lastname">Nachname</label>
 		  <div class="col-md-4">
 		  	<input id="lastname" name="lastname" type="text" placeholder="Nachname" class="form-control input-md">
-		  </div>
-		</div>
+		  </div><br>
+		</div><br>
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="email">Mail</label>
 		  <div class="col-md-4">
 		  	<input id="email" name="email" type="text" placeholder="Mail" class="form-control input-md">
-		  </div>
-		</div>
+		  </div><br>
+		</div><br>
 		
+        <div class="form-group">
+        
+            <?php if (empty($schueler)): ?>
+                <div class="dhd">
+                    <h2 class="item title">Hoopla! Keine Schüler gefunden.</h2>
+
+                </div>
+                <?php else: ?>
+                <?php foreach ($schueler as $user): ?>
+
+
+
+                            <?= $user->firstname?>
+                            <?=  $user->lastname . "\t" ?> 
+
+                            <?= $user->email?>
+                                <a title="Löschen" href="/schueler/delete?id=<?= $user->id ?>">Löschen</a>
+
+                            <br>
+
+                <?php endforeach ?>
+            <?php endif ?>
+        </div>
+        
 		<div class="form-group">
-	      <label class="col-md-2 control-label" for="send">&nbsp;</label>
+	      <!--<label class="col-md-2 control-label" for="send">&nbsp;</label>-->
 		  <div class="col-md-4">
 		    <input id="send" name="send" type="submit" class="btn btn-primary">
-		  </div>
-		</div>
+		  </div><br>
+		</div><br>
 	</div>
 </form>
