@@ -24,16 +24,18 @@
       <div class="logo" >
         <img id="logo" src="\images\Logo.png">
       </div>
-      <div class="content-right col-md-3">
-          <nav class="navigation">
-              <ul class="">
-                  <a href="/"><li>Home</li></a>
-                  <a href="/schueler"><li>Schüler</li></a>
-                  <a href="/schueler/create"><li>Schüler erstellen</li></a>
-              </ul>
-          </nav>
-      </div>
-    <div class="container col-md-9">
+    <div class="container">
+        <?php if(!isset($is_home) || $is_home == false){ ?>
+        <div class="content-right col-md-4">
+            <nav class="navigation">
+                <ul class="">
+                    <a href="/"><li>Home</li></a>
+                    <a href="/schueler"><li>Schüler</li></a>
+                    <a href="/schueler/create"><li>Schüler erstellen</li></a>
+                    <a href="/schueler/create"><li>Schüler erstellen</li></a>
+                </ul>
+            </nav>
+        </div>
 
     <h1><?= $heading ?></h1>
-
+        <?php } ?>

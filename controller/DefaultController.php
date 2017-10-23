@@ -39,6 +39,7 @@ class DefaultController
         $view = new View('default_index');
         $view->title = 'Noob-Teacher';
         $view->heading = 'Noob-Teacher';
+        $view->is_home = true;
         $view->display();
     }
 }
