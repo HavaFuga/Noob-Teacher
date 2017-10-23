@@ -28,8 +28,8 @@
           <nav class="navigation">
               <ul class="">
                   <a href="/"><li>Home</li></a>
-                  <a href="/user"><li>Benutzer</li></a>
-                  <a href="/user/create"><li>Benutzer erstellen</li></a>
+                  <a href="/schueler"><li>Schüler</li></a>
+                  <a href="/schueler/create"><li>Schüler erstellen</li></a>
               </ul>
           </nav>
       </div>
