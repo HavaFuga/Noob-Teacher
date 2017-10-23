@@ -25,25 +25,45 @@ class SchuelerController
         $view->heading = 'Schüler erstellen';
         $view->display();
     }
-
+    public function test_input($email)
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $emailErr = "Invalid email format"; 
+            return $emailErr;
+            
+            }
+        
+        return $email;
+    }
     public function doCreate()
     {
         if ($_POST['send']) {
-            $firstName = $_POST['firstName'];
-            $lastName = $_POST['lastName'];
-            $email = test_input($_POST["email"]);
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format"; 
+            $firstname = $_POST['firstname'];
+            $lastname = $_POST['lastname'];
+            
+            $email = $this->test_input($_POST["email"]);
+            
+            if($email  == "Invalid email format"){
+                header('Location: /schueler/create');
+                echo '<script type="text/javascript" language="Javascript">  
+                    alert("Fehler beim validieren der Email-adresse!"); 
+                    </script> '; 
+                
+            }else {
+                $schuelerRepository = new SchuelerRepository();
+                $schuelerRepository->create($firstname, $lastname, $email);
+                header('Location: /schueler');
             }
 
-            $schuelerRepository = new SchuelerRepository();
-            $schuelerRepository->create($firstName, $lastName, $email);
+            
         }
 
         // Anfrage an die URI /user weiterleiten (HTTP 302)
-        header('Location: /schueler');
+        
     }
-
+    
+    
+    
     public function delete()
     {
         $schuelerRepository = new SchuelerRepository();

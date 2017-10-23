@@ -1,15 +1,15 @@
-<form class="form-horizontal" action="/user/doCreate" method="post">
+<form class="form-horizontal" action="/schueler/doCreate" method="post">
 	<div class="component" data-html="true">
 		<div class="form-group">
-		  <label class="col-md-2 control-label" for="firstName">Vorname</label>
+		  <label class="col-md-2 control-label" for="firstname">Vorname</label>
 		  <div class="col-md-4">
-		  	<input id="firstName" name="firstName" type="text" placeholder="Vorname" class="form-control input-md">
+		  	<input id="firstname" name="firstname" type="text" placeholder="Vorname" class="form-control input-md">
 		  </div>
 		</div>
 		<div class="form-group">
-		  <label class="col-md-2 control-label" for="lastName">Nachname</label>
+		  <label class="col-md-2 control-label" for="lastname">Nachname</label>
 		  <div class="col-md-4">
-		  	<input id="lastName" name="lastName" type="text" placeholder="Nachname" class="form-control input-md">
+		  	<input id="lastname" name="lastname" type="text" placeholder="Nachname" class="form-control input-md">
 		  </div>
 		</div>
 		<div class="form-group">
