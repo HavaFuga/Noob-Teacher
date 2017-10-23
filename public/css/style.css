@@ -10,7 +10,7 @@ body {
 }
 .navigation{
     display: table;
-    background: #999999;
+    background: #000000;
     width: 100%;
     min-height: 450px;
 
@@ -22,7 +22,7 @@ body {
 
 .navigation li{
     list-style: none;
-    padding: 5px 40px;
+    padding: 20px 40px;
 }
 
 .navigation li:hover{
@@ -30,6 +30,6 @@ body {
 }
 
 .navigation a {
-    color: black;
+    color: #ffffff;
     font-size: 16px;
 }

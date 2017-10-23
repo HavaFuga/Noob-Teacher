@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `schueler` (
   `id` int(11) NOT NULL,
-  `fistname` varchar(45) DEFAULT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
   `lastname` varchar(45) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Schüler Tabelle';
@@ -37,7 +37,7 @@ CREATE TABLE `schueler` (
 -- Daten für Tabelle `schueler`
 --
 
-INSERT INTO `schueler` (`id`, `fistname`, `lastname`, `email`) VALUES
+INSERT INTO `schueler` (`id`, `firstname`, `lastname`, `email`) VALUES
 (1, 'Mirjam', 'Doyon', 'm.d@noob.ch'),
 (2, 'Jonas ', 'Lehmann', 'j.l@noob.ch'),
 (3, 'Ali ', 'Dapar', 'a.d@noob.ch'),
