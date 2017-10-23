@@ -24,6 +24,7 @@
       <div class="logo" >
         <img id="logo" src="\images\Logo.png">
       </div>
+
     <div class="container">
         <?php if(!isset($is_home) || $is_home == false){ ?>
         <div class="content-right col-md-4">
@@ -33,9 +34,11 @@
                     <a href="/schueler"><li>Schüler</li></a>
                     <a href="/schueler/create"><li>Schüler erstellen</li></a>
                     <a href="/schueler/create"><li>Schüler erstellen</li></a>
+                    <a href="/schueler/help"><li>Hilfe</li></a>
                 </ul>
             </nav>
         </div>
+
 
     <h1><?= $heading ?></h1>
         <?php } ?>
