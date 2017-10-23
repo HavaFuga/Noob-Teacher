@@ -14,11 +14,9 @@
                     
                     <?= $user->email?> 
     
-<<<<<<< HEAD
-						<a title="Löschen" href="/schueler    /delete?id=<?= $user->id ?>">Löschen</a>
-=======
+
 						<a title="Löschen" href="/schueler/delete?id=<?= $user->id ?>">Löschen</a>
->>>>>>> a9951eae27d31d5580a9964191fd31a6f5505ebe
+
 					<br>
 				
 		<?php endforeach ?>
