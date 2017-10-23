@@ -31,12 +31,13 @@
 
 
 
-                            <?= $user->firstname?>
-                            <?=  $user->lastname . "\t" ?> 
+           <?= $user->firstname?>
+             <?=  $user->lastname . "\t" ?> 
 
-                            <?= $user->email?>
+            <?= $user->email?>
                                 <a title="Löschen" href="/schueler/delete?id=<?= $user->id ?>">Löschen</a>
-
+            <?= " | "?>
+            <a title="Bearbeiten" href="/schueler/edit?id=<?= $user->id ?>">Bearbeiten</a>
                             <br>
 
                 <?php endforeach ?>
