@@ -6,17 +6,10 @@
 		</div>
 	<?php else: ?>
 		<?php foreach ($schueler as $user): ?>
-			
-				
-				    
 					<?= $user->firstname?>
-                    <?=  $user->lastname . "\t" ?> 
-
+                    <?=  $user->lastname . "\t". "\t" ?>
                     <?= $user->email?>
-					
-
 					<br>
-				
 		<?php endforeach ?>
 	<?php endif ?>
 </article>
