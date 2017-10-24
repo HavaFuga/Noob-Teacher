@@ -43,4 +43,20 @@ class SchuelerRepository extends Repository
 
         return $statement->insert_id;
     }
+    
+    public function edit($firstname, $lastname, $email, $id)
+    {
+        $query = "Update $this->tableName Set firstname = ?, lastname = ?, email = ? where id = $id";
+
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param('sss', $firstname, $lastname, $email);
+
+        if (!$statement->execute()) {
+            throw new Exception($statement->error);
+        }
+
+        return $statement->insert_id;
+        
+        
+    }
 }

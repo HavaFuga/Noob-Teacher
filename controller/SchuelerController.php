@@ -75,13 +75,62 @@ class SchuelerController
     }
     public function edit()
     {
-        
+        // falls $_GEt['id'] gesetzt -> daten für dieses element mitschicken
+        if($_GET['id'] > 0 ){
+            
+            $id = $_GET['id'];
+            $schuelerRepository = new SchuelerRepository();
+            $view = new View('schueler_edit');
+            $view->title = 'Schüler bearbeiten';
+            $view->heading = 'Schüler bearbeiten';
+            
+            
+            $view->aktuellerSchueler = $schuelerRepository->readById($id);
+            
+            $view->schueler = $schuelerRepository->readAll();
+            $view->display();
+            
+            
+            
+        }
+        else 
+        {
         $schuelerRepository = new SchuelerRepository();
         $view = new View('schueler_edit');
         $view->title = 'Schüler bearbeiten';
         $view->heading = 'Schüler bearbeiten';
+        
         $view->schueler = $schuelerRepository->readAll();
         $view->display();
+            
+        }
+    }
+    public function doedit()
+    {
+        
+        if ($_POST['send']) {
+            $firstname = htmlspecialchars($_POST['firstname']);
+            $lastname = htmlspecialchars($_POST['lastname']);
+            $email = htmlspecialchars($_POST["email"]);
+            $email = $this->test_input($email);
+            $id = htmlspecialchars($_POST["id"]);
+            
+            if($email  == "Invalid email format"){
+                $view = new View('schueler_edit_fehlermeldung');
+                $view->title = 'Fehler';
+                $view->heading = 'Fehler';
+                $view->display();
+                
+            }else {
+                $schuelerRepository = new SchuelerRepository();
+                $schuelerRepository->edit($firstname, $lastname, $email, $id);
+                header('Location: /schueler');
+            }
+
+            
+        }
+
+        // Anfrage an die URI /user weiterleiten (HTTP 302)
         
     }
     public function help()
