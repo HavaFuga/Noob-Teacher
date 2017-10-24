@@ -17,6 +17,9 @@ a:hover{
 a{
     color: #EB4357;
 }
+h3{
+    margin:0 0 10px 0;
+}
 .btn-primary{
     background-color: #000;
     border: none;
