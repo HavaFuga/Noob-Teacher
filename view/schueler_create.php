@@ -1,4 +1,4 @@
-<form class="form" action="/schueler/doCreate" method="post">
+<form class="form" validation() action="/schueler/doCreate" method="post" name="myForm" onsubmit="return validateForm()">
 	<div class="component" data-html="true">
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="firstname">Vorname</label>
