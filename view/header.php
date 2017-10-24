@@ -28,7 +28,7 @@
     <div class="container">
         <?php if(!isset($is_home) || $is_home == false){ ?>
         <div class="content-right col-md-4">
-            <nav class="navigation">
+            <nav class="navigation" id="navi">
                 <ul class="">
                     <a href="/"><li>Home</li></a>
                     <a href="/schueler"><li>Schüler</li></a>
@@ -37,6 +37,7 @@
                     <a href="/schueler/help"><li>Hilfe</li></a>
                 </ul>
             </nav>
+            <div id="hv"></div>
         </div>
 
 
