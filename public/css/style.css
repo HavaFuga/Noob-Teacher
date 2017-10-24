@@ -44,6 +44,7 @@ footer{
 .home-text{
     font-size: 40px;
     text-align: center;
+    margin-top: 25px;
 }
 .nav-home button {
     color: white;
@@ -67,6 +68,7 @@ footer{
 }
 .nav-home {
     text-align: center;
+    margin-top: 25px;
 }
 a:hover {
     color: #Eb8a95;
