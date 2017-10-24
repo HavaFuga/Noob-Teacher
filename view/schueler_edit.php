@@ -59,21 +59,24 @@
                     <h2 class="item title">Hoopla! Keine Schüler gefunden.</h2>
 
                 </div>
+
                 <?php else: ?>
-                <?php foreach ($schueler as $user): ?>
-
-
-
-           <?= $user->firstname?>
-             <?=  $user->lastname . "\t" ?> 
-
-            <?= $user->email?>
-                                <a title="Löschen" href="/schueler/delete?id=<?= $user->id ?>">Löschen</a>
-            <?= " | "?>
-            <a title="Bearbeiten" href="/schueler/edit?id=<?= $user->id ?>">Bearbeiten</a>
-                            <br>
-
-                <?php endforeach ?>
+                <table class="schüler">
+                    <tr>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>E-Mail</th>
+                    </tr>
+                    <?php foreach ($schueler as $user): ?>
+                        <tr>
+                            <td style="width: 100px;"><?=$user->firstname?></td>
+                            <td style="width: 100px;"><?=$user->lastname?></td>
+                            <td style="width: 130px;"><?=$user->email?></td>
+                            <td style="width: 100px;"><a title="Löschen" href="/schueler/delete?id=<?= $user->id ?>">Löschen</a></td>
+                            <td style="width: 100px;"><a title="Bearbeiten" href="/schueler/edit?id=<?= $user->id ?>">Bearbeiten</a></td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
             <?php endif ?>
         </div>
         
