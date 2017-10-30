@@ -14,7 +14,6 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" type="text/css" rel="stylesheet">
-
     <!-- JS -->
       <script href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
@@ -35,6 +34,7 @@
                     <a href="/schueler/create"><li>Schüler erstellen</li></a>
                     <a href="/schueler/edit"><li>Schüler bearbeiten</li></a>
                     <a href="/schueler/help"><li>Hilfe</li></a>
+                     
                 </ul>
             </nav>
             <div id="hv"></div>
