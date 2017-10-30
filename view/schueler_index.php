@@ -5,6 +5,7 @@
             
 		</div>
 	<?php else: ?>
+    <!-- Listet Schüler in Tabellen form auf -->
         <table class="schüler">
             <tr>
                 <th>Vorname</th>

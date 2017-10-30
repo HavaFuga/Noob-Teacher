@@ -4,10 +4,10 @@ require_once '../repository/SchuelerRepository.php';
 
 class SchuelerController
 {
+    #Schüler Auflistung
     public function index()
     {
         $schuelerRepository = new SchuelerRepository();
-
         $view = new View('schueler_index');
         $view->title = 'Schüler';
         $view->heading = 'Schüler';
@@ -15,6 +15,7 @@ class SchuelerController
         $view->display();
     }
 
+    #Schüler erstellen-Seite
     public function create()
     {
         $view = new View('schueler_create');
@@ -23,6 +24,7 @@ class SchuelerController
         $view->display();
     }
 
+    #E-Mail validieren
     public function test_input($email)
     {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -32,6 +34,7 @@ class SchuelerController
         return $email;
     }
 
+    #Vorname validieren
     public function test_firstname($firstname)
     {
         if ($firstname == "" || (strlen($firstname) < 2 || (strlen($firstname)) > 50)){
@@ -39,7 +42,8 @@ class SchuelerController
         }
         return $firstname;
     }
-
+    
+    #Nachname validieren
     public function test_lastname($lastname)
     {
         if ($lastname == "" || (strlen($lastname) < 2 || (strlen($lastname)) > 50)){
@@ -47,7 +51,8 @@ class SchuelerController
         }
         return $lastname;
     }
-
+    
+    #Schüler erstellen
     public function doCreate()
     {
         if ($_POST['send']) {
@@ -71,6 +76,7 @@ class SchuelerController
         }
     }
 
+    #Schüler löschen
     public function delete()
     {
         $schuelerRepository = new SchuelerRepository();
@@ -78,6 +84,7 @@ class SchuelerController
         header('Location: /schueler');
     }
 
+    #Schüler Bearbeiten-Seite
     public function edit()
     {
         if($_GET['id'] > 0 ){
@@ -102,6 +109,7 @@ class SchuelerController
         }
     }
 
+    #Schüler bearbeiten
     public function doedit()
     {
         if ($_POST['send']) {
@@ -126,7 +134,8 @@ class SchuelerController
             }
         }
     }
-
+    
+    #Erstellt die Hilfeseite
     public function help()
     {
         $view = new View('schueler_help');

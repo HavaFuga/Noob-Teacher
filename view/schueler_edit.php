@@ -1,5 +1,5 @@
 <form class="form" action="/schueler/doedit" method="post">
-    
+    <!-- Kombiniert die Schüler Seite mit der Schüler erstellungs Seite und macht daraus eine Bearbeitungs Seite -->
     <?php 
         if(isset($aktuellerSchueler)){
             echo '<input name="id" type="hidden" value="'.$aktuellerSchueler->id.'">';
@@ -59,7 +59,7 @@
                     <h2 class="item title">Hoopla! Keine Schüler gefunden.</h2>
 
                 </div>
-
+                <!-- Schüler Auflistung -->
                 <?php else: ?>
                 <table class="schüler">
                     <tr>
@@ -79,7 +79,7 @@
                 </table>
             <?php endif ?>
         </div>
-        
+        <!-- Schüeler daten speichern -->
 		<div class="form-group">
 	      <!--<label class="col-md-2 control-label" for="send">&nbsp;</label>-->
 		  <div class="col-md-4">

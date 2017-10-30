@@ -6,6 +6,7 @@
     <a href="/schueler/edit"><button>Schüler bearbeiten</button></a>
     <a href="/schueler/help"><button>Hilfe</button></a>
 </div>
+<!-- teacher-icon -->
 <div class="teacher-icon">
  <img id="teacher-icon" src="\images\teacher-icon.png">
 </div>
