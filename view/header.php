@@ -29,12 +29,16 @@
         <div class="content-right col-md-4">
             <nav class="navigation" id="navi">
                 <ul class="">
-                    <a href="/"><li>Home</li></a>
-                    <a href="/schueler"><li>Schüler</li></a>
-                    <a href="/schueler/create"><li>Schüler erstellen</li></a>
-                    <a href="/schueler/edit"><li>Schüler bearbeiten</li></a>
-                    <a href="/schueler/help"><li>Hilfe</li></a>
+
+                    
                      
+
+                    <a class="btn animated-button thar-three" href="/"><li>Home</li></a>
+                    <a class="btn animated-button thar-three" href="/schueler"><li>Schüler</li></a>
+                    <a class="btn animated-button thar-three" href="/schueler/create"><li>Schüler erstellen</li></a>
+                    <a class="btn animated-button thar-three" href="/schueler/edit"><li>Schüler bearbeiten</li></a>
+                    <a class="btn animated-button thar-three" href="/schueler/help"><li>Hilfe</li></a>
+
                 </ul>
             </nav>
             <div id="hv"></div>
