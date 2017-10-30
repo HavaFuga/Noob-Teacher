@@ -8,5 +8,5 @@
 </div>
 <!-- teacher-icon -->
 <div class="teacher-icon">
- <img id="teacher-icon" src="\images\teacher-icon.png">
+    <img id="teacher-icon" src="\images\teacher-icon.png">
 </div>
