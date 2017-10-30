@@ -30,10 +30,7 @@ class SchuelerRepository extends Repository
      */
     public function create($firstname, $lastname, $email)
     {
-       
-
         $query = "INSERT INTO $this->tableName (firstname, lastname, email) VALUES (?, ?, ?)";
-
         $statement = ConnectionHandler::getConnection()->prepare($query);
         $statement->bind_param('sss', $firstname, $lastname, $email);
 

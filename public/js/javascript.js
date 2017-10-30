@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
     class Clock {
         constructor(id) {
@@ -45,3 +46,5 @@ $(document).ready(function() {
 
 });
 
+=======
+>>>>>>> 7a10d544ce7958ddb5f22f2bdd6eba36afde2495

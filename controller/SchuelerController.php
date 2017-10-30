@@ -30,7 +30,7 @@ class SchuelerController
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $emailErr = "Invalid email format"; 
             return $emailErr;
-            }
+        }
         return $email;
     }
 
@@ -99,13 +99,12 @@ class SchuelerController
         }
         else 
         {
-        $schuelerRepository = new SchuelerRepository();
-        $view = new View('schueler_edit');
-        $view->title = 'Schüler bearbeiten';
-        $view->heading = 'Schüler bearbeiten';
-        
-        $view->schueler = $schuelerRepository->readAll();
-        $view->display();
+            $schuelerRepository = new SchuelerRepository();
+            $view = new View('schueler_edit');
+            $view->title = 'Schüler bearbeiten';
+            $view->heading = 'Schüler bearbeiten';
+            $view->schueler = $schuelerRepository->readAll();
+            $view->display();
         }
     }
 
