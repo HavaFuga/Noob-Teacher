@@ -89,6 +89,13 @@ h3{
     background: #9e2d3b;
     border-radius: 15px;
 }
+#teacher-icon{
+    width: 400px;
+    height: auto;
+}
+.teacher-icon{
+    text-align: center;
+}
 
 /*--Tabelle--*/
 .schüler th{
