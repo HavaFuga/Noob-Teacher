@@ -95,8 +95,18 @@ h3{
 }
 .teacher-icon{
     text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: transform .5s ease;
+    width: 400px;
 }
+.teacher-icon:hover {
+     transform: scale(1.05);
+ }
 
+.teacher-icon--inverted:hover {
+     transform: scale(.96);
+ }
 /*--Tabelle--*/
 .schüler th{
     padding-bottom: 10px;
@@ -117,8 +127,9 @@ a.animated-button.thar-three {
     z-index: 900;
 }
 a.animated-button.thar-three:hover {
-    background-color: transparent;
+    background-color: #6B1F28;;
     text-shadow: nthree;
+    background: #6B1F28;
 }
 a.animated-button.thar-three:hover:before {
     left: 0%;
@@ -139,4 +150,7 @@ a.animated-button.thar-three:before {
     transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     0s;
 }
+
+/* Uhr */
+
 

@@ -34,6 +34,17 @@
                     <a class="btn animated-button thar-three" href="/schueler/help"><li>Hilfe</li></a>
                 </ul>
             </nav>
+            <div class="clock">
+                <div class="top"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="shadow"></div>
+                <div class="hour"></div>
+                <div class="minute"></div>
+                <div class="second"></div>
+            </div>
             <div id="hv"></div>
         </div>
 
