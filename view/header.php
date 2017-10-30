@@ -20,7 +20,7 @@
   </head>
   <body>
       <div class="logo" >
-          <a href="/"><img id="logo" src="/images/Logo.png"></a>
+          <a href="/"><img alt="" id="logo" src="/images/Logo.png"></a>
       </div>
     <div class="container">
         <?php if(!isset($is_home) || $is_home == false){ ?>
